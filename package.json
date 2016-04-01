@@ -1,0 +1,11 @@
+{
+  "name": "riotjs-todo",
+  "version": "1.0.0",
+  "description": "ToDo Application with ReactJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harish Modugu",
+  "license": "ISC"
+}
