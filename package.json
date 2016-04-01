@@ -6,9 +6,9 @@
   "scripts": {
     "html": "copyfiles ./index.html ./public/",
     "bundle": "webpack -p -d --progress --colors",
-    "build": "npm-run-all bundle",
+    "build": "npm-run-all html bundle",
     "serve": "webpack-dev-server --hot",
-    "dev": "npm-run-all serve",
+    "dev": "npm-run-all html serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Harish Modugu",
@@ -23,6 +23,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "copyfiles": "^0.2.1"
+    "copyfiles": "^0.2.1",
+    "open-browser-webpack-plugin": "0.0.2"
   }
 }

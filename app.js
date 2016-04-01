@@ -1,5 +1,7 @@
 //require("./style.css");
 require("./tags/app.tag");
-riot.mount('*');
+require("./tags/gender.tag");
+require("./tags/input-field.tag");
+require("./tags/add-contact.tag");
 
-//document.write(require("./content.js"));
+riot.mount('*');

@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var OpenBrowserWebpackPlugin = require("open-browser-webpack-plugin");
 module.exports = {
   entry: "./app.js",
   output: {
@@ -8,6 +9,9 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       riot: 'riot'
+    }),
+    new OpenBrowserWebpackPlugin({
+      url: 'http://localhost:1337'
     })
   ],
   module: {
