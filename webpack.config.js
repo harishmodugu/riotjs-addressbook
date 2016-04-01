@@ -1,13 +1,28 @@
+var webpack = require("webpack");
 module.exports = {
-  entry: "./entry.js",
+  entry: "./app.js",
   output: {
-    path: __dirname,
-    filenamg: 'bundle.js'
+    path: __dirname+ '/public/',
+    filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      riot: 'riot'
+    })
+  ],
   module: {
+    preLoaders: [
+      { test: /\.tag$/, exclude: /node_modules/, loader: 'riotjs-loader', query: {type: 'none'}}
+    ],
     loaders: [
-      {test: /\.css$/, loader: "style!css"}
+      {test: /\.js$|\.tag$/, exclude: /node_modules/, loader: "babel-loader"}
     ]
+  },
+  devServer: {
+    contentBase: './public',
+    port: 1337,
+    hot:true,
+    inline: true
   }
 
 };
