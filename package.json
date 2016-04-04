@@ -14,8 +14,8 @@
   "author": "Harish Modugu",
   "license": "ISC",
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-loader": "^6.2.4",
+    "babel": "5.4.0",
+    "babel-loader": "5.4.0",
     "npm-run-all": "^1.7.0",
     "riot": "^2.3.17",
     "riotjs-loader": "^3.0.0",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "copyfiles": "^0.2.1",
-    "open-browser-webpack-plugin": "0.0.2"
+    "open-browser-webpack-plugin": "0.0.2",
+    "riotcontrol": "0.0.1"
   }
 }
